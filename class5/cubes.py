@@ -12,3 +12,12 @@ Example Output:
 Numbers: [0, 1, 2, 3]
 Cubes: [0, 1, 8, 27]
 """
+
+numbers = range(10)
+cubes = []
+for x in numbers:
+	y = x * x * x 
+	cubes.append(y)
+
+print "Numbers%s" %numbers
+print "Cubes%s" %cubes

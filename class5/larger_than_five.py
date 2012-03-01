@@ -15,3 +15,11 @@ Example Output:
 All numbers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 Big numbers: [6, 7, 8, 9]
 """
+
+numbers = range(10)
+big_numbers = []
+for x in numbers:
+	if x > 5:
+		big_numbers.append(x)
+print numbers
+print big_numbers
