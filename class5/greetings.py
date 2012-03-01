@@ -13,3 +13,9 @@ Hello Dave
 Hello Sue
 Hello James
 """
+
+names = ["Dave", "Sue", "James"]
+names.append("John")
+print len(names)
+for n in names: 
+	print "Hello " + n
