@@ -16,6 +16,9 @@ Sum: 45
 """
 numbers = range(10)
 total = 0
-for x in numbers 
-	
+for x in numbers: 
+	total = x + total 
+print "Numbers%s" %numbers
+print "Total %s " %total
+
 	

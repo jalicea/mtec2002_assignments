@@ -12,3 +12,11 @@ Example Output:
 Numbers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 Sum cubes: 2025
 """
+
+numbers = range(10)
+sum_cubes = 0
+for x in numbers:
+	y = x * x * x
+	sum_cubes = y + sum_cubes
+print "Numbers %s" %numbers
+print "sum_cubes %s" %sum_cubes

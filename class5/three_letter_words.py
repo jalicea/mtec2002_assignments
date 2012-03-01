@@ -12,3 +12,12 @@ Example Output:
 Words: ['dog', 'lizard', 'cat', 'hawk', 'pig', 'ibek']
 Three letter words: ['dog', 'cat', 'pig']
 """
+
+words = ["Dog", "lizard", "cat", "hawk", "pig", "ibek"]
+three_letter_words = []
+for x in words:
+	if len(x) == 3:
+		three_letter_words.append(x)
+print "words%s" %words
+print "Three letter words %s" %three_letter_words
+
