@@ -10,3 +10,13 @@ Example Output:
 List of numbers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 List of cubes: [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
 """
+num = range(10)
+cubes = []
+x = 1
+while x > 0:
+	x = x-1
+	for y in num:
+		a = y*y*y
+		cubes.append(a)
+print "List of numbers %s" %num
+print "List of cubes %s" %cubes

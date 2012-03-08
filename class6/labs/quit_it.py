@@ -14,3 +14,7 @@ Type quit to stop this program
 >quit
 Thanks!  See you later.
 """
+command = ""
+while command != "quit":
+	print "Type quit to stop this program" 
+	command = raw_input(">")

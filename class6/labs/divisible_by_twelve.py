@@ -18,4 +18,8 @@ Give me a number that's divisible by 12
 >144
 Thanks! 144 is divisible by 12
 """
-
+num = None
+while num == None or num % 12 != 0:
+	print "give me a num / 12"
+	num = int(raw_input(">"))
+	

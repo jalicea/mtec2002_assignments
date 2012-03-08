@@ -10,3 +10,14 @@ Example Output:
 All words: ['dog', 'zebra', 'giraffe', 'elephant', 'cat', 'lion', 'bear']
 Three letter words: ['dog', 'cat']
 """
+
+animals = ["dog", "zebra", "giraffe", "elephant", "cat", "lion", "bear"]
+three_letter_words = []
+count = 0 
+while count < len(animals):
+	if len(animals[count]) == 3:
+		three_letter_words.append(animals[count])
+	count += 1
+
+print "All words %s" %(animals)
+print "Three letter words %s" %(three_letter_words)
