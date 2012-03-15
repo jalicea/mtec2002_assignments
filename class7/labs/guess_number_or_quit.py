@@ -31,3 +31,14 @@ Guess the number I'm thinking of...
 > quit
 Bye!
 """
+
+secret_num == 15
+while True: 
+	print " Guess the number I'm thinking of"
+	user_input = (raw_input(">")
+	if int(user_input) == serect_num:
+		Print "You got it"
+		exit()
+	elif user_input == "quit"
+		exit()
+	

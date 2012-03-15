@@ -1,8 +1,10 @@
 """
 ascii_art.py
 ===
-Create a program that prints out ascii art based on user input.  Continue to ask the user for input until the user types in "quit".
-* Create variables named "tree", "truck" and "heart" that contain the following patterns (note that the backslashes must be "escaped"; having two backslashes in a row is intentional):
+Create a program that prints out ascii art based on user input.  Continue to ask the user for input 
+until the user types in "quit".
+* Create variables named "tree", "truck" and "heart" that contain the following patterns (note that 
+the backslashes must be "escaped"; having two backslashes in a row is intentional):
 
     /\\
    /  \\
@@ -14,7 +16,7 @@ Create a program that prints out ascii art based on user input.  Continue to ask
 |_________|
   O     O
   __  __
- /  \/  \\
+ /  \/  \
   \    /
     \/
 
@@ -25,7 +27,8 @@ Create a program that prints out ascii art based on user input.  Continue to ask
 * If the input is "quit", exit the program using the exit() function.
 * If the input is none of the above, print out "I don't know how to draw that.".
 * As long as the input is not quit, keep prompting the user for more input.
-* (INTERMEDIATE) add a command named "help"; it will display all of the commands and pictures that are available (construct the output using the existing variables for you pictures)
+* (INTERMEDIATE) add a command named "help"; it will display all of the commands and pictures that 
+are available (construct the output using the existing variables for you pictures)
 
 Example Output:
 What picture should I draw?
@@ -54,3 +57,81 @@ tree =  """
     ||
 """
 
+tree =  """
+    /\\
+   /  \\
+   /  \\
+  /____\\
+    ||
+"""
+truck = """
+      __
+ ____|  \_    
+|_________|
+  O     O
+  """
+heart = """
+  __  __
+ /  \/  \\
+  \    /
+    \/
+  """
+apple = """
+    _  /_
+  /  `''  \
+ |         |
+  \       /  -Felix Lee-
+   \__.__/
+"""
+robot = """
+                  o
+                  |
+                ,'~'.
+               /     \\
+              |   ____|_
+              |  '___,,_'         .----------------.
+              |  ||(o |o)|       ( KILL ALL HUMANS! )
+              |   -------         ,----------------'
+              |  _____|         -'
+              \\  '####,
+               -------
+             /________\\
+           (  )        |)
+           '_ ' ,------|\\         _
+          /_ /  |      |_\\        ||
+         /_ /|  |     o| _\\      _|| 
+        /_ / |  |      |\ _\____//' |
+       (  (  |  |      | (_,_,_,____/
+        \ _\ |   ------|        
+         \ _\|_________|
+          \ _\ \\__\\\\__\\
+          |__| |__||__|
+       ||/__/  |__||__|
+               |__||__|
+               |__||__|
+               /__)/__)
+              /__//__/
+             /__//__/
+            /__//__/.
+          .'    '.   '.
+         (_kOs____)____)
+         
+"""
+while True:
+	print "What picture should I draw?"
+	user_input = raw_input(">")
+	if user_input == "robot":
+		print robot
+	if user_input == "tree":
+		print tree
+	if user_input =="truck":
+		print truck
+	if user_input == "heart":
+		print heart
+	if user_input == "apple":
+		print apple
+	if user_input == "quit":
+		print "Bye"
+		exit()
+	else:
+		print "Wut is this"
