@@ -13,3 +13,12 @@ Draw a 100 x 100 square using the turtle module.
 	d. Hint: Use up and goto 
 	e. Hint: Make sure mainloop() is at the end of your program! 
 """
+
+import turtle
+y=1
+for x in range(40):
+	turtle.forward(100+y)
+	turtle.left(90)
+	y = y+1
+turtle.mainloop()
+	
