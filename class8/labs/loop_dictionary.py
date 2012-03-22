@@ -18,3 +18,11 @@ title is Frankenstein.
 {'author': 'Frank Herbert', 'pages': 500, 'title': 'Dune'}
 {'author': 'Mary Shelley', 'pages': 278, 'title': 'Frankenstein'}
 """
+
+book1 = {'author': 'Frank Herbert', 'pages': 500, 'title': 'Dune'}
+book2 = {'author': 'Mary Shelley', 'pages': 278, 'title': 'Frankenstein'}
+
+for k,v in book1.items():
+	print k,v
+for k,v in book2.items():
+	print k,v
