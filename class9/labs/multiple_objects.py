@@ -25,3 +25,43 @@ To code this:
 6. Draw a circle for each iteration using the 2-element list at index 0 for the x value and index 1 for the y value
 7. Add velocity_y to the 2-element list at index 1 (the y coordinate)
 """
+
+import pygame
+import random
+
+FRAME_RATE = 100
+WINDOW_WIDTH = 640
+WINDOW_HEIGHT = 480
+WINDOW_TITLE = "My Game"
+NUM_CIRCLES = 106
+circles = []
+velocity_y = 1
+r = 5
+for c in range(NUM_CIRCLES):
+	circles.append([random.randint(0,WINDOW_WIDTH),0])
+
+background_color = (001, 001, 001)
+running = True
+pygame.init()
+
+screen = pygame.display.set_mode([WINDOW_WIDTH, WINDOW_HEIGHT])
+pygame.display.set_caption(WINDOW_TITLE)
+clock = pygame.time.Clock()
+
+while running == True:
+
+	# stop the main loop when window is closed 
+	for event in pygame.event.get():
+		if event.type == pygame.QUIT:
+			running = False
+			
+	screen.fill(background_color)
+	for c in circles:
+		pygame.draw.circle(screen, (020, 200, 200), (c[0],c[0]), 5)
+		c[1] += velocity_y 
+	
+	clock.tick(FRAME_RATE)
+	pygame.display.flip()
+
+# exit when we're done with the loop
+pygame.quit()

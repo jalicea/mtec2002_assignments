@@ -22,3 +22,46 @@ Add random lateral motion (that is, animate along the x-axis):
 4. Run the program to see what happens
 5. Bound the velocity to a value between -2 and 2 using a conditional for a less pronounced effect
 """
+import pygame
+import random
+
+FRAME_RATE = 100
+WINDOW_WIDTH = 640
+WINDOW_HEIGHT = 480
+WINDOW_TITLE = "My Game"
+
+background_color = (001, 001, 001)
+running = True
+pygame.init()
+
+x = WINDOW_WIDTH/2
+y = 0
+velocity_y = 1
+velocity_x = random.randint(-1,1)
+
+
+screen = pygame.display.set_mode([WINDOW_WIDTH, WINDOW_HEIGHT])
+pygame.display.set_caption(WINDOW_TITLE)
+clock = pygame.time.Clock()
+
+while running == True:
+
+	# stop the main loop when window is closed 
+	for event in pygame.event.get():
+		if event.type == pygame.QUIT:
+			running = False
+			
+	screen.fill(background_color)
+
+	# draw everything here!  this line draws a circle in the middle of the screen
+	
+	pygame.draw.circle(screen, (200, 200, 200), (x,y), 10)
+	y += velocity_y
+	x += velocity_x 
+	
+ 
+	clock.tick(FRAME_RATE)
+	pygame.display.flip()
+
+# exit when we're done with the loop
+pygame.quit()
