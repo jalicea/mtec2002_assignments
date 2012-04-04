@@ -35,3 +35,22 @@ distance: 42, time: "asdf"
 I don't think you put in two numbers.
 >
 """
+while True:
+	d = 0
+	t = 0
+	v = 0
+	print "What is the distance"
+	try:
+		d = int(raw_input(">"))
+	except ValueError:
+		print "thats no number"
+	print "What is the time"
+	t = int(raw_input(">"))
+	try:
+		v = d/t
+	except ZeroDivisionError:
+		print "Cant divde by Zero"
+	print ("distance: %s") %d	
+	print ("time: %s") %t
+	print ("velocity %s") %v 
+	
