@@ -31,6 +31,7 @@ PROGRAM
 8. notice all of the repeated code?  how could we reduce the redundant code?
 """
 # import the bs4 module
+import bs4
 
 # create the following html string and assign it to a variable named unordered_list
 unordered_list = """
@@ -40,15 +41,15 @@ unordered_list = """
 </ul>
 """ 
 # create a beautiful soup object using the html above
-
+soup = bs4.BeautifulSoup(unordered_list)
 # print out a formatted version of the soup object
-
+print soup.prettify()
 # print out the ul tag
-
+print soup.ul
 # print out the first li in the ul
-
+print soup.ul.li
 # print out the string that's between the first li tags
-
+print soup.ul.li.string
 # create the following html string and assign it to a variable named paragraphs
 paragraphs = """
 <div>
@@ -62,21 +63,26 @@ paragraphs = """
 </div>
 """
 # create a beautiful soup object using the html above
-
+soup = bs4.BeautifulSoup(paragraphs)
 # get a list of all of the paragraph tags and assign it to p_tags
-
+p_tags = soup.find_all()
+print p_tags
 # iterate through the list of paragraphs and print them out
-
+for lines in p_tags:
+	print lines.string
 # iterate through the list of paragraphs and print out only the part of the paragraph that's a strong tag
-
+for lines in p_tags:
+	print lines.strong
 # find all of the strong tags; assign to variable named strong_tags
-
+strong_tages = soup.find_all('string')
 # iterate through the list of strong tags and print out the *string* that's in the strong tags
-
+for tags in strong_tages:
+	print tag
 # find all of the paragraphs that have a class named foo; assign it to a variable named foos
-
+foos = soup.find_all('p','foo')
 # iterate through the list of paragraphs and print them out
-
+for f in foos:
+	print f
 # create the following html string and assign it to a variable named links
 links = """
 <p>
@@ -86,17 +92,19 @@ links = """
 """
 
 # create a beautiful soup object using the html above
-
+soup = bs4.BeautifulSoup(links)
 # find all of the a tags and assign it to a variable named a_tags
-
+a_tages = soup.find_all('a')
 # iterate through all of the a tags and print out the string representing each link
-
+for a in a_tages:
+	print a.string
 # iterate through all of the a tags and print out the url by using get on the href attribute
-
+for a in a_tages:
+	print a.get('href')
 
 # create the following html and assign it to a variable named mixed
 mixed = """
-<h1>This is a heading</div>
+<h1>This is a heading</h1>
 <div>
 	<p>Hello</p>
 	<h1>This is another heading</h1>
@@ -112,9 +120,11 @@ mixed = """
 </p>
 """
 # create a beautiful soup object using the html above
-
+soup = bs4.BeautifulSoup(mixed)
 # only print out the string that's in the h1 that's nested in the div
-
+print soup.div.h1
 # print out all of the urls and the *string* associated with them using find_all and a for loop
-
+for x in soup.find_all('a'):
+	print x.get('href')
+	print x.get('href')
 # print out only the urls that are in links inside paragraph tags with a class bar using find_all and a for loop
