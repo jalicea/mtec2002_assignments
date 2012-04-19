@@ -29,3 +29,13 @@ I don't know how to translate that
 word to translate, please
 >
 """
+
+
+
+d = {"dog":"perro","cat":"gato"}
+while True:
+	word = raw_input("What word would you like to translate?")
+	try:
+		print d[word]	
+	except:
+		print "I dont know how to translate that"

@@ -22,3 +22,25 @@ meow
 meow
 >>> 
 """
+
+class Pet:
+	def __init__(self, name):
+		self.name = n
+	def __str__(self):
+		return self.name
+	def speak(self):
+		print "generic animal sounds"
+
+class Dog(Pet):
+	def speak(self):
+		print "barK"
+
+class Cat(Pet):
+	def speak(self):
+		print "nyan"
+
+
+p = Pet("fluffy")
+print p 
+d = dog("spot")
+print d
