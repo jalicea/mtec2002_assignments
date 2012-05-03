@@ -17,3 +17,10 @@ spanish.py
 	...
 	# use sys.argv[1] to get the first item passed in through the commandline
 """
+def to_spanish(anything):
+	d = {"cat":"gato","dog":"perro"}
+	return d[anything]
+	
+if __name__ == "__main__":
+	print to_spanish("cat")
+		
